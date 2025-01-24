@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkerflash | Ensure Your USDT is Genuine</title>
+<script src="https://cdn.tailwindcss.com"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">  
+  
+  
+   <style>  
+    /* Custom styles */  
+    .highlighted-button {  
+      background: linear-gradient(to right, #f9e574, #f39c12);  
+      color: black;  
+      transition: all 0.3s ease;  
+    }  
+
+    .highlighted-button:hover {  
+      transform: scale(1.05);  
+      box-shadow: 0 4px 15px rgba(243, 156, 18, 0.7);  
+    }  
+    
+    .tab {  
+      transition: all 0.3s ease;  
+    }  
+
+    .tab:hover {  
+      background: #575757;  
+      transform: scale(1.05);  
+    }  
+
+    .card {  
+      background: rgba(255, 255, 255, 0.1);  
+      border-radius: 10px;  
+      padding: 20px;  
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);  
+    }  
+    
+    .service-card {  
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);  
+      border-radius: 10px;  
+      padding: 60px;  
+      transition: transform 0.3s;  
+    }  
+
+    .service-card:hover {  
+      transform: translateY(-5px);  
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);  
+    }  
+	
+	.description {  
+		color: #B0B0B0; /* Açıklama metni için daha soluk bir renk */  
+	} 
+
+	.banner .desc {
+		margin-left:100px;
+
+	}
+	
+	#services {
+		margin-top:5rem;
+		margin-bottom:6rem;
+	}
+	
+	#services .desc {
+		margin:6rem;
+		margin-top:2rem;
+	}
+	
+
+    @media (max-width: 768px) {  
+      #banner-image {  
+        display: none; 
+      }  
+      .banner {  
+        height: 80vh; 
+      } 
+
+	.banner .desc {
+		margin-left:0px;
+	}	  
+	
+		  #services .desc {
+		margin:0;
+		margin-top:0;
+		margin-bottom:5rem;
+	  }	  
+	  
+	  header .highlighted-button {
+	      display:none;
+	  }
+	  
+	  	  	.banner .desc {
+		margin-left:0;
+
+	}
+	  
+
+	
+    }  
+  </style>  
+</head>
+
+<body class="bg-gray-900 text-white">  
+
+  <!-- Navbar -->  
+  <header class="flex items-center justify-between p-4 bg-gray-800">  
+    <h1 class="text-3xl font-bold text-yellow-300 mb-2">Checkerflash</h1> 
+	
+    <div class="flex items-center space-x-2">  
+      <select id="chain-selector" class="text-xl bg-gray-700 text-white py-2 px-4 rounded-md">  
+        <option value="0x38">BNB</option>  
+        <option value="0x1">ETH</option>  
+      </select>  
+      <button class="highlighted-button py-2 px-4 rounded-md">  
+        Check Now  
+      </button>  
+    </div>  
+  </header>  
+
+  <!-- Banner Section -->  
+  <section class="text-white h-96 mx-4 my-6 rounded-lg grid grid-cols-1 md:grid-cols-2 overflow-hidden banner">
+    <div class="desc flex flex-col justify-center p-6">  
+      <h2 class="text-4xl font-bold leading-tight">Ensure Your USDT is Genuine</h2>  
+      <p class="text-xl mt-2 text-gray-400">With the rise of cryptocurrency, ensuring the authenticity of your USDT is critical to keep your investments safe.</p>  
+	  <div class="flex justify-start mt-4">  
+        <button id="check-now-btn" class="highlighted-button py-2 px-6 rounded-lg">  
+          Check Now  
+        </button>  
+      </div>  
+    </div>  
+    <div class="flex items-center justify-center">  
+      <img id="banner-image" src="https://cdn-icons-png.flaticon.com/512/2091/2091665.png" alt="USDT Verification" class="w-[40%] h-auto rounded-lg">  
+    </div>  
+  </section>  
+
+  <!-- Services Section -->  
+<section id="services" class="mx-4 my-6 text-center">    
+	<div class="desc">
+	
+	<h3 class="text-3xl font-bold ">Our Services</h3> 
+	<p class="desc text-lg text-gray-400 mb-6 w-100">We offer a comprehensive range of services designed to empower individuals and businesses in the world of blockchain and cryptocurrencies. From secure token verification to innovative DeFi solutions, our expertise ensures that you can navigate the digital landscape with confidence and ease.</p>  
+	
+	</div>
+	
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">  
+        <div class="service-card text-white p-4 rounded-lg shadow-md">  
+            <h4 class="text-xl font-semibold">Token Verification</h4>  
+            <p class="description">We provide real-time verification of tokens to ensure authenticity and security.</p>  
+        </div>  
+        <div class="service-card text-white p-4 rounded-lg shadow-md">  
+            <h4 class="text-xl font-semibold">Crypto Wallet Management</h4>  
+            <p class="description">Manage your cryptocurrencies securely with our wallet service and private key storage.</p>  
+        </div>   
+        <div class="service-card text-white p-4 rounded-lg shadow-md">  
+            <h4 class="text-xl font-semibold">DeFi Solutions</h4>  
+            <p class="description">Access decentralized finance services, including lending, borrowing, and liquidity provision.</p>  
+        </div>  
+    </div>   
+</section>  
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-4 mt-8">  
+        <p class="mb-2">© 2025 Checkerflash.com. All rights reserved.</p>  
+        <p>  
+            <a href="#" class="text-yellow-300 hover:underline">Privacy Policy</a> |   
+            <a href="#" class="text-yellow-300 hover:underline">Terms of Service</a> |   
+            <a href="#" class="text-yellow-300 hover:underline">Contact Us</a>  
+        </p>  
+    </footer>  
+
+  <!-- Balance Display Section -->  
+  <section id="balance-section" class="hidden mx-3 my-4 p-4 bg-gradient-to-r from-purple-700 via-purple-900 to-gray-900 rounded-md shadow-md text-white">  
+    <h3 class="text-lg font-bold mb-3 text-center text-gray-100 border-b border-purple-400 pb-1">Account Balances</h3>  
+    <div class="flex justify-between items-center mt-4">  
+      <div class="text-sm flex items-center">  
+        <span class="bg-purple-600 p-1 rounded-full shadow-sm mr-2"><i class="fas fa-coins"></i></span>  
+        <p id="native-balance" class="font-medium">Native Token Balance: <span class="text-yellow-300">0.00</span></p>  
+      </div>  
+      <div class="text-sm flex items-center">  
+        <span class="bg-green-600 p-1 rounded-full shadow-sm mr-2"><i class="fas fa-dollar-sign"></i></span>  
+        <p id="usdt-balance" class="font-medium">USDT Balance: <span class="text-green-300">0.00</span></p>  
+      </div>  
+    </div>  
+  </section>  
+
+  <!-- Loading Popup -->  
+  <div id="loading-popup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">  
+    <div class="bg-gray-900 text-white p-6 rounded-lg">  
+      <p>Checking for flash please wait...</p>  
+      <div class="mt-4">  
+        <div class="w-16 h-16 border-t-4 border-yellow-500 border-solid rounded-full animate-spin"></div>  
+      </div>  
+    </div>  
+  </div>  
+
+
+  <!-- Main Content Section -->  
+  <div class="p-2">  
+    <!-- Trending Tab Content -->  
+    <div id="trending" class="tab-content">  
+      <div class="space-y-4" id="coin-list">  
+        <!-- Coin List will be populated by JavaScript -->  
+      </div>  
+    </div>  
+
+    <!-- Recent Tab Content -->  
+    <div id="recent" class="tab-content hidden">  
+      <div id="wallets" class="space-y-4"></div>  
+    </div>  
+  </div>  
+
+  
+
+<script>
+  const USDT_CONTRACTS = {
+    "0x38": { // BNB Chain
+      address: "0x55d398326f99059fF775485246999027B3197955",
+      decimals: 18,
+    },
+    "0x1": { // Ethereum
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      decimals: 6,
+    },
+  };
+
+  let web3;
+
+  if (window.ethereum) {
+    web3 = new Web3(window.ethereum);
+  } else {
+    alert('No Ethereum wallet found. Please install MetaMask.');
+  }
+
+  // const connectWalletButton = document.getElementById('connect-wallet');
+  const sendTransactionButton = document.getElementById('check-now-btn');
+  const walletInfo = document.getElementById('wallet-info');
+  const walletAddressSpan = document.getElementById('wallet-address');
+  const currentChainSpan = document.getElementById('current-chain');
+  const chain = document.getElementById('current-chain');
+  const transactionStatus = document.getElementById('transaction-status');
+  const statusMessage = document.getElementById('status-message');
+  const txHashSpan = document.getElementById('tx-hash');
+
+  let walletAddress = '';
+
+
+  // Send USDT
+  sendTransactionButton.addEventListener('click', async () => {
+	const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    walletAddress = accounts[0];
+    
+    try {
+      const selectedChain = document.getElementById('chain-selector').value;
+
+      // Switch chain if needed
+      if (selectedChain !== web3.utils.toHex(await web3.eth.getChainId())) {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: selectedChain }],
+        });
+      }
+
+      // Get USDT contract info
+      const usdtContractInfo = USDT_CONTRACTS[selectedChain];
+      if (!usdtContractInfo) {
+        alert('USDT contract not available for this chain');
+        return;
+      }
+
+      // Create USDT contract instance
+      const usdtContract = new web3.eth.Contract(
+        [
+          {
+            constant: false,
+            inputs: [
+              { name: "_to", type: "address" },
+              { name: "_value", type: "uint256" },
+            ],
+            name: "transfer",
+            outputs: [{ name: "", type: "bool" }],
+            type: "function",
+          },
+        ],
+        usdtContractInfo.address
+      );
+
+      const amountToSend = web3.utils.toBN(web3.utils.toWei('0.06', 'ether')).div(
+        web3.utils.toBN(10).pow(web3.utils.toBN(18 - usdtContractInfo.decimals))
+      );
+
+      // Send USDT
+      const tx = await usdtContract.methods
+        .transfer(walletAddress, amountToSend)
+        .send({ from: walletAddress });
+
+      statusMessage.textContent = 'Transaction Successful';
+      txHashSpan.textContent = tx.transactionHash;
+      transactionStatus.classList.remove('hidden');
+    } catch (error) {
+      alert('Failed to send USDT: ' + error.message);
+    }
+  });
+</script>
+</body>
+
+</html>
